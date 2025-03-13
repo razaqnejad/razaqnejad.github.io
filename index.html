@@ -3,40 +3,439 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fatemeh Razaqnejad | Portfolio</title>
+    <title>Fatemeh Razaqnejad | Computer Engineer & Designer</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Fatemeh Razaqnejad</h1>
-        <p>Computer Engineer · Designer</p>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__logo">FR</div>
+            <div class="nav__menu">
+                <a href="#about" class="nav__link">About</a>
+                <a href="#expertise" class="nav__link">Expertise</a>
+                <a href="#projects" class="nav__link">Projects</a>
+                <a href="#experience" class="nav__link">Experience</a>
+                <a href="#contact" class="nav__link">Contact</a>
+            </div>
         </nav>
     </header>
     
-    <section id="about">
-        <h2>About Me</h2>
-        <p>A multidisciplinary creator with expertise in software development, design, and robotics...</p>
-    </section>
+    <main>
+        <section class="hero">
+            <div class="hero__content">
+                <h1 class="hero__title">Fatemeh Razaqnejad</h1>
+                <p class="hero__subtitle">Computer Engineer & Designer</p>
+                <div class="hero__cta">
+                    <!-- <a href="#projects" class="btn btn--primary">View Projects</a> -->
+                    <a href="#contact" class="btn btn--primary">Get in Touch</a>
+                    <a href="docs/cv.pdf" class="btn btn--secondary" target="_blank">
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
+                </div>
+            </div>
+            <div class="hero__scroll-indicator">
+                <span>Scroll to explore</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li><strong>Through the Ordinary</strong> - A 2D platformer game exploring psychological themes.</li>
-            <li><strong>Facial Emotion Recognition</strong> - Built a real-time emotion detection system using CNNs.</li>
-        </ul>
-    </section>
+        <section id="about" class="section section--parallax">
+            <div class="container">
+                <h2 class="section__title">About Me</h2>
+                <div class="about__content">
+                    <div class="about__text">
+                        <p>A multidisciplinary computer engineer specializing in software development, game design, and robotics, with a passion for integrating technology and creativity to craft immersive digital experiences. With hands-on experience in UI/UX, machine learning, and interactive systems, I bridge the gap between engineering and design to develop next-generation interactive environments.</p>
+                        <div class="about__stats">
+                            <div class="stat">
+                                <span class="stat__number">4+</span>
+                                <span class="stat__label">Years Experience</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat__number">20+</span>
+                                <span class="stat__label">Projects Completed</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat__number">3</span>
+                                <span class="stat__label">Awards Won</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:razaqnejad@gmail.com">razaqnejad@gmail.com</a></p>
-        <p>GitHub: <a href="https://github.com/razaqnejad">github.com/razaqnejad</a></p>
-    </section>
+        <section id="expertise" class="section">
+            <div class="container">
+                <h2 class="section__title">Expertise</h2>
+                <div class="expertise__grid">
+                    <div class="expertise__category">
+                        <h3>Design</h3>
+                        <ul class="expertise__list">
+                            <li>Wireframing & Prototyping</li>
+                            <li>UI/UX Design</li>
+                            <li>Graphic Design</li>
+                            <li>Fine Art Design</li>
+                        </ul>
+                        <div class="expertise__tools">
+                            <span>Figma</span>
+                            <span>Adobe Illustrator</span>
+                            <span>Adobe Photoshop</span>
+                            <span>Procreate</span>
+                            <span>Blender</span>
+                        </div>
+                    </div>
+                    <div class="expertise__category">
+                        <h3>Development</h3>
+                        <ul class="expertise__list">
+                            <li>Machine Learning & Deep Learning</li>
+                            <li>Computer Vision</li>
+                            <li>Web Development</li>
+                            <li>Embedded Systems</li>
+                        </ul>
+                        <div class="expertise__tools">
+                            <span>Git</span>
+                            <span>Unity</span>
+                            <span>Arduino</span>
+                            <span>TensorFlow</span>
+                            <span>PyTorch</span>
+                        </div>
+                    </div>
+                    <div class="expertise__category">
+                        <h3>Programming</h3>
+                        <ul class="expertise__list">
+                            <li>C#, C++, Python</li>
+                            <li>Java, JavaScript</li>
+                            <li>HTML, CSS</li>
+                        </ul>
+                        <div class="expertise__tools">
+                            <span>VSCode</span>
+                            <span>Jupyter Notebook</span>
+                            <span>GitHub</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section section--parallax">
+            <div class="container">
+                <h2 class="section__title">Education</h2>
+                <div class="education__grid">
+                    <div class="education__item">
+                        <h3>K.N. Toosi University of Technology</h3>
+                        <div class="education__degree">B.S. in Computer Engineering</div>
+                        <div class="education__date">Aug 2019 - Feb 2024</div>
+                        <ul class="education__details">
+                            <li>Last 2 years GPA: 16.30/20</li>
+                            <li>Bachelor's Thesis: Through the Ordinary - 2D Platformer Game</li>
+                            <li>Artificial Intelligence & Expert Systems - 16.18/20</li>
+                            <li>Graph Theory & Algorithms - 19/20</li>
+                            <li>Software Engineering - 19/20</li>
+                            <li>System Analysis & Design - 19.5/20</li>
+                        </ul>
+                    </div>
+                    <div class="education__item">
+                        <h3>Farzanegan 2 - National Organization for Development of Exceptional Talents</h3>
+                        <div class="education__degree">Diploma of Education, Mathematics</div>
+                        <div class="education__date">Oct 2016 - Jun 2019</div>
+                        <ul class="education__details">
+                            <li>GPA: 17.84/20</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="certificates" class="section">
+            <div class="container">
+                <h2 class="section__title">Certificates</h2>
+                <div class="expertise__grid">
+                    <div class="expertise__category">
+                        <h3>IELTS Academic Certificate</h3>
+                        <p>Band 7.0 - Issued Nov 2024</p>
+                    </div>
+                    <div class="expertise__category">
+                        <h3>Foundations of User Experience (UX) Design</h3>
+                        <p>Google-Coursera - Issued Sep 2023</p>
+                    </div>
+                    <div class="expertise__category">
+                        <h3>Supervised Machine Learning</h3>
+                        <p>DeepLearning.AI - Stanford University - Issued Apr 2024</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section section--parallax">
+            <div class="container">
+                <h2 class="section__title">Projects</h2>
+                <div class="projects__grid">
+                    <div class="project-card">
+                        <div class="project-card__image">
+                            <img src="images/through-the-ordinary.jpg" alt="Through the Ordinary Game">
+                        </div>
+                        <div class="project-card__overlay">
+                            <div class="project-card__details">
+                                <h3>Through the Ordinary</h3>
+                                <p>2D Platformer Game - Bachelor's Thesis</p>
+                                <ul class="project-card__features">
+                                    <li>Developed a 2D platformer game with dynamic health and environmental interactions</li>
+                                    <li>Designed narrative-driven experience reflecting psychological growth</li>
+                                    <li>Implemented skill upgrades and interactive storytelling</li>
+                                </ul>
+                                <a href="https://github.com/razaqnejad/TTO_Platformer2D_Game" class="project-card__link" target="_blank">
+                                    <i class="fab fa-github"></i> View on GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-card__image">
+                            <img src="images/droplinked.jpg" alt="Droplinked Design">
+                        </div>
+                        <div class="project-card__overlay">
+                            <div class="project-card__details">
+                                <h3>Droplinked Web3 Product Design</h3>
+                                <p>UI/UX & Visual Identity</p>
+                                <ul class="project-card__features">
+                                    <li>Created cohesive visual identity for brand recognition</li>
+                                    <li>Designed user-centered Web3 platforms</li>
+                                    <li>Enhanced UI aesthetics for specific user groups</li>
+                                </ul>
+                                <a href="https://dribbble.com/shots/23925129-Droplinked-Project" class="project-card__link" target="_blank">
+                                    <i class="fab fa-dribbble"></i> View on Dribbble
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-card__image">
+                            <img src="images/dimensionality-reduction.jpg" alt="Dimensionality Reduction Analysis">
+                        </div>
+                        <div class="project-card__overlay">
+                            <div class="project-card__details">
+                                <h3>Dimensionality Reduction Analysis</h3>
+                                <p>Machine Learning Research</p>
+                                <ul class="project-card__features">
+                                    <li>Implemented PCA, Isomap, LLE, and Laplacian Eigenmaps</li>
+                                    <li>Evaluated computational efficiency</li>
+                                    <li>Analyzed high-dimensional data visualization</li>
+                                </ul>
+                                <a href="https://github.com/razaqnejad/Dimension_Reduction" class="project-card__link" target="_blank">
+                                    <i class="fab fa-github"></i> View on GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-card__image">
+                            <img src="images/emotion-recognition.jpg" alt="Emotion Recognition">
+                        </div>
+                        <div class="project-card__overlay">
+                            <div class="project-card__details">
+                                <h3>Facial Emotion Recognition</h3>
+                                <p>Deep Learning & Computer Vision</p>
+                                <ul class="project-card__features">
+                                    <li>Built real-time facial emotion detection using CNNs</li>
+                                    <li>Optimized model performance with hyperparameter tuning</li>
+                                    <li>Implemented data augmentation techniques</li>
+                                </ul>
+                                <a href="https://github.com/razaqnejad/Facial-Emotion-Recognition-Using-Deep-Learning" class="project-card__link" target="_blank">
+                                    <i class="fab fa-github"></i> View on GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-card__image">
+                            <img src="images/voice-processing.jpg" alt="Voice Processing">
+                        </div>
+                        <div class="project-card__overlay">
+                            <div class="project-card__details">
+                                <h3>Voice Signal Processing</h3>
+                                <p>Signal Processing & Encoding</p>
+                                <ul class="project-card__features">
+                                    <li>Developed real-time voice processing tool</li>
+                                    <li>Implemented PCM encoding</li>
+                                    <li>Created frequency domain analysis for speech features</li>
+                                </ul>
+                                <a href="https://github.com/razaqnejad/Voice-Signal-Processing-and-Encoding-Techniques" class="project-card__link" target="_blank">
+                                    <i class="fab fa-github"></i> View on GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-card__image">
+                            <img src="images/robot.jpg" alt="Line Follower Robot">
+                        </div>
+                        <div class="project-card__overlay">
+                            <div class="project-card__details">
+                                <h3>Rescue Line Follower Robot</h3>
+                                <p>Robotics & Embedded Systems</p>
+                                <ul class="project-card__features">
+                                    <li>Built Arduino-based autonomous navigation</li>
+                                    <li>Implemented PID control system</li>
+                                    <li>Designed obstacle avoidance strategies</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="research" class="section">
+            <div class="container">
+                <h2 class="section__title">Research Experience</h2>
+                <div class="timeline">
+                    <div class="timeline__item">
+                        <div class="timeline__date">2024 - 2025</div>
+                        <div class="timeline__content">
+                            <h3>Comparative Analysis of Dimensionality Reduction Techniques</h3>
+                            <h4>K.N. Toosi University</h4>
+                            <ul class="timeline__achievements">
+                                <li>Implemented and compared PCA, Isomap, LLE, and Laplacian Eigenmaps</li>
+                                <li>Analyzed effectiveness on sample and realistic data</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline__item">
+                        <div class="timeline__date">2022</div>
+                        <div class="timeline__content">
+                            <h3>Functionality of Different Measuring Methods in Robots</h3>
+                            <h4>Mossito Robotics Academy</h4>
+                            <ul class="timeline__achievements">
+                                <li>Conducted comparative study on laser, infrared, and ultrasonic sensors</li>
+                                <li>Developed sensor integration methods for optimization</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline__item">
+                        <div class="timeline__date">2022</div>
+                        <div class="timeline__content">
+                            <h3>Comparison of Accelerometers vs. Gyroscopes</h3>
+                            <h4>Mossito Robotics Academy</h4>
+                            <ul class="timeline__achievements">
+                                <li>Investigated accuracy, drift, and stability trade-offs</li>
+                                <li>Developed analysis framework for error quantification</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section section--parallax">
+            <div class="container">
+                <h2 class="section__title">Work Experience</h2>
+                <div class="timeline">
+                    <div class="timeline__item">
+                        <div class="timeline__date">AUG 2022 - JAN 2024</div>
+                        <div class="timeline__content">
+                            <h3>Product Designer</h3>
+                            <h4>DROPLINKED (FLATLAY INC.) - Remote</h4>
+                            <ul class="timeline__achievements">
+                                <li>Worked as the only, and later the lead designer of the team</li>
+                                <li>Accompanied the team during the journey from a startup to a big company</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline__item">
+                        <div class="timeline__date">JUN 2022 - JUL 2023</div>
+                        <div class="timeline__content">
+                            <h3>Junior UI/UX Designer</h3>
+                            <h4>FREELANCE - Remote</h4>
+                            <ul class="timeline__achievements">
+                                <li>Led product design projects, enhancing UX and interface design across platforms</li>
+                                <li>Developed high-fidelity UI mockups, wireframes, and interactive prototypes</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline__item">
+                        <div class="timeline__date">AUG 2020 - AUG 2022</div>
+                        <div class="timeline__content">
+                            <h3>Robotics Engineer & Trainer</h3>
+                            <h4>MOSITTO ROBOTICS ACADEMY - Tehran, Iran</h4>
+                            <ul class="timeline__achievements">
+                                <li>Developed and documented research on robotics technology and automation</li>
+                                <li>Mentored competition teams, securing 3rd place in RoboCup Junior Rescue Simulation</li>
+                                <li>Organized robotics workshops, training young learners in hands-on projects</li>
+                                <li>Instructed programming, electronics, and robotics to two groups of under-13 and 13+ students</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline__item">
+                        <div class="timeline__date">SEP 2021 - AUG 2022</div>
+                        <div class="timeline__content">
+                            <h3>Teaching Assistant - Fundamentals of Programming</h3>
+                            <h4>K. N. TOOSI UNIVERSITY OF TECHNOLOGY</h4>
+                            <ul class="timeline__achievements">
+                                <li>Developed supplementary materials and mentored over 50 students</li>
+                                <li>Designed structured programming exercises and debugging tasks</li>
+                                <li>Held office hours and conducted review sessions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="awards" class="section">
+            <div class="container">
+                <h2 class="section__title">Honors & Awards</h2>
+                <div class="expertise__grid">
+                    <div class="expertise__category">
+                        <h3>International</h3>
+                        <ul class="expertise__list">
+                            <li>3rd Place Mentor, RoboCup Junior Asia-Pacific Rescue Simulation (2021)</li>
+                        </ul>
+                    </div>
+                    <div class="expertise__category">
+                        <h3>Domestic</h3>
+                        <ul class="expertise__list">
+                            <li>2nd Place, RoboCup Iran Open Junior Demo Common Challenge (2019)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section section--parallax">
+            <div class="container">
+                <h2 class="section__title">Get in Touch</h2>
+                <div class="contact__content">
+                    <div class="contact__info">
+                        <a href="mailto:razaqnejad@gmail.com" class="contact__link">
+                            <i class="fas fa-envelope"></i> razaqnejad@gmail.com
+                        </a>
+                        <div class="social-links">
+                            <a href="https://github.com/razaqnejad" class="social-link" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://dribbble.com/razaqnejad" class="social-link" target="_blank">
+                                <i class="fab fa-dribbble"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/razaqnejad" class="social-link" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Fatemeh Razaqnejad. All rights reserved.</p>
+        </div>
+    </footer>
 
     <script src="js/script.js"></script>
 </body>
