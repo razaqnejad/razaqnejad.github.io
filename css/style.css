@@ -74,8 +74,8 @@ body.loaded {
     width: 100%;
     padding: 2rem 4rem;
     z-index: 100;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
+    /* background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px); */
     transform: translateY(0);
     transition: transform 0.3s ease;
 }
