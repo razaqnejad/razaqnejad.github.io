@@ -77,7 +77,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe all sections and cards
-document.querySelectorAll('.section, .project-card, .expertise__category, .education__item').forEach(element => {
+document.querySelectorAll('.section, .project-card, .skills__category, .education__item').forEach(element => {
     observer.observe(element);
 });
 
