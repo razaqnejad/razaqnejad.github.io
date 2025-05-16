@@ -76,6 +76,13 @@ let lastScroll = 0;
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
     
+    // Add blur effect when scrolling down
+    if (currentScroll > 0) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+    
     if (currentScroll <= 0) {
         header.classList.remove('scroll-up');
         return;
