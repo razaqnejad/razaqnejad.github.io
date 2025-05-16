@@ -43,8 +43,8 @@ body.loaded {
     position: fixed;
     pointer-events: none;
     z-index: 9999;
-    transition: transform 0.2s ease;
-    display: none;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s, height 0.2s, background 0.2s;
 }
 
 .cursor-follower {
@@ -55,14 +55,25 @@ body.loaded {
     position: fixed;
     pointer-events: none;
     z-index: 9998;
-    transition: transform 0.3s ease;
-    display: none;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s, height 0.3s, border-color 0.3s;
 }
 
 @media (min-width: 769px) {
     .cursor,
     .cursor-follower {
         display: block;
+    }
+}
+
+/* Hide default cursor */
+@media (min-width: 769px) {
+    * {
+        cursor: none !important;
+    }
+    
+    a, button, [role="button"], input, textarea, select {
+        cursor: none !important;
     }
 }
 

@@ -2,12 +2,57 @@
 const cursor = document.querySelector('.cursor');
 const cursorFollower = document.querySelector('.cursor-follower');
 
+let mouseX = 0;
+let mouseY = 0;
+let cursorX = 0;
+let cursorY = 0;
+let followerX = 0;
+let followerY = 0;
+
 document.addEventListener('mousemove', (e) => {
-    cursor.style.left = e.clientX + 'px';
-    cursor.style.top = e.clientY + 'px';
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+});
+
+function animateCursor() {
+    // Smooth cursor movement
+    cursorX += (mouseX - cursorX) * 0.2;
+    cursorY += (mouseY - cursorY) * 0.2;
     
-    cursorFollower.style.left = e.clientX + 'px';
-    cursorFollower.style.top = e.clientY + 'px';
+    // Smoother follower movement
+    followerX += (mouseX - followerX) * 0.05;
+    followerY += (mouseY - followerY) * 0.05;
+    
+    cursor.style.left = cursorX + 'px';
+    cursor.style.top = cursorY + 'px';
+    
+    cursorFollower.style.left = followerX + 'px';
+    cursorFollower.style.top = followerY + 'px';
+    
+    requestAnimationFrame(animateCursor);
+}
+
+animateCursor();
+
+// Interactive elements hover effect
+const interactiveElements = document.querySelectorAll('a, button, [role="button"], input, textarea, select, .project-card');
+
+interactiveElements.forEach(element => {
+    element.addEventListener('mouseenter', () => {
+        cursor.style.width = '16px';
+        cursor.style.height = '16px';
+        cursorFollower.style.width = '60px';
+        cursorFollower.style.height = '60px';
+        cursorFollower.style.borderColor = 'var(--color-accent)';
+    });
+    
+    element.addEventListener('mouseleave', () => {
+        cursor.style.width = '8px';
+        cursor.style.height = '8px';
+        cursorFollower.style.width = '40px';
+        cursorFollower.style.height = '40px';
+        cursorFollower.style.borderColor = 'var(--color-primary)';
+    });
 });
 
 // Smooth Scroll for Navigation Links
@@ -79,19 +124,6 @@ const observer = new IntersectionObserver((entries) => {
 // Observe all sections and cards
 document.querySelectorAll('.section, .project-card, .skills__category, .education__item').forEach(element => {
     observer.observe(element);
-});
-
-// Project Cards Hover Effect
-document.querySelectorAll('.project-card').forEach(card => {
-    card.addEventListener('mouseenter', () => {
-        cursor.style.transform = 'scale(1.5)';
-        cursorFollower.style.transform = 'scale(1.5)';
-    });
-    
-    card.addEventListener('mouseleave', () => {
-        cursor.style.transform = 'scale(1)';
-        cursorFollower.style.transform = 'scale(1)';
-    });
 });
 
 // Mobile Menu Toggle
