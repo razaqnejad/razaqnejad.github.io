@@ -3,47 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fatemeh Razaqnejad - Professional UI/UX Designer & Developer Portfolio. Explore creative designs, innovative projects, and technical expertise.">
+    <meta name="keywords" content="UI/UX Designer, Web Developer, Portfolio, Creative Design, User Experience">
+    <meta name="author" content="Fatemeh Razaqnejad">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://razaqnejad.github.io/">
+    <meta property="og:title" content="Fatemeh Razaqnejad | UI/UX Designer & Developer">
+    <meta property="og:description" content="Professional UI/UX Designer & Developer Portfolio">
+    <meta property="og:image" content="images/sapiens.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://razaqnejad.github.io/">
+    <meta property="twitter:title" content="Fatemeh Razaqnejad | UI/UX Designer & Developer">
+    <meta property="twitter:description" content="Professional UI/UX Designer & Developer Portfolio">
+    <meta property="twitter:image" content="images/sapiens.png">
+    
     <title>Fatemeh Razaqnejad | UI/UX Designer & Developer</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="js/script.js" as="script">
+    <link rel="preload" href="images/sapiens.png" as="image">
+    
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
 </head>
 <body>
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo">FR</div>
+            <div class="loading-spinner"></div>
+            <p class="loading-text">Loading...</p>
+        </div>
+    </div>
+    
+    <!-- <div class="cursor"></div>
+    <div class="cursor-follower"></div> -->
 
-    <header class="header">
-        <nav class="nav">
-            <div class="nav__logo">FR</div>
-            <div class="nav__menu">
-                <a href="#about" class="nav__link">About</a>
-                <a href="#skills" class="nav__link">skills</a>
-                <a href="#projects" class="nav__link">Projects</a>
-                <a href="#experience" class="nav__link">Experience</a>
-                <a href="#awards" class="nav__link">Awards</a>
-                <a href="#contact" class="nav__link">Contact</a>
+    <header class="header" role="banner">
+        <nav class="nav" role="navigation" aria-label="Main navigation">
+            <div class="nav__logo" aria-label="Fatemeh Razaqnejad">FR</div>
+            <div class="nav__menu" role="menubar">
+                <a href="#about" class="nav__link" role="menuitem">About</a>
+                <a href="#skills" class="nav__link" role="menuitem">Skills</a>
+                <a href="#projects" class="nav__link" role="menuitem">Projects</a>
+                <a href="#experience" class="nav__link" role="menuitem">Experience</a>
+                <a href="#awards" class="nav__link" role="menuitem">Awards</a>
+                <a href="#contact" class="nav__link" role="menuitem">Contact</a>
             </div>
         </nav>
     </header>
     
     <main>
-        <section class="hero" id="home">
+        <section class="hero" id="home" aria-label="Hero section">
             <div class="hero__content">
                 <h1 class="hero__title">Fatemeh Razaqnejad</h1>
                 <p class="hero__subtitle">UI/UX Designer & Developer</p>
                 <div class="hero__cta">
-                    <!-- <a href="#projects" class="btn btn--primary">View Projects</a> -->
-                    <a href="#contact" class="btn btn--primary">Get in Touch</a>
-                    <a href="docs/cv.pdf" class="btn btn--secondary" target="_blank">
-                        <i class="fas fa-download"></i> Portfolio
+                    <a href="#contact" class="btn btn--primary" aria-label="Get in touch">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        Get in Touch
+                    </a>
+                    <a href="docs/cv.pdf" class="btn btn--secondary" target="_blank" aria-label="Download portfolio PDF">
+                        <i class="fas fa-download" aria-hidden="true"></i>
+                        Portfolio
                     </a>
                 </div>
             </div>
-            <div class="hero__scroll-indicator">
+            <div class="hero__scroll-indicator" aria-label="Scroll indicator">
                 <span>Scroll to explore</span>
-                <i class="fas fa-chevron-down"></i>
+                <i class="fas fa-chevron-down" aria-hidden="true"></i>
             </div>
-            <img src="images/sapiens.png" alt="Profile illustration" class="hero__image">
+            <img src="images/sapiens.png" alt="Profile illustration" class="hero__image" loading="lazy">
         </section>
 
         <section id="about" class="section section--parallax">
@@ -755,9 +798,16 @@
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
-            <p>&copy; 2024 Fatemeh Razaqnejad. All rights reserved.</p>
+            <div class="footer__content">
+                <p>&copy; 2024 Fatemeh Razaqnejad. All rights reserved.</p>
+                <div class="footer__links">
+                    <a href="#home" aria-label="Back to top">Back to Top</a>
+                    <span class="footer__separator">•</span>
+                    <a href="docs/cv.pdf" target="_blank" aria-label="Download CV">Download CV</a>
+                </div>
+            </div>
         </div>
     </footer>
 
