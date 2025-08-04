@@ -727,7 +727,7 @@ body.loaded {
 .timeline__item::before {
     content: '';
     position: absolute;
-    left: -3rem;
+    left: -3.2rem;
     top: 0.75rem;
     width: 16px;
     height: 16px;
